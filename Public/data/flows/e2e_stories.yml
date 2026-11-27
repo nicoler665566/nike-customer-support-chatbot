@@ -1,0 +1,18 @@
+# These stories are not strictly necessary for the bot to reply, but we need them to
+#  test for the reply
+version: "3.1"
+stories:
+- story: greeting
+  steps:
+    - user: hi
+    - action: utter_greet
+
+- story: thankyou
+  steps:
+    - user: thanks
+    - action: utter_noworries
+
+- story: goodbye
+  steps:
+    - user: bye
+    - action: utter_goodbye

@@ -1,0 +1,7 @@
+# Server which runs your custom actions (e.g., Using_GPT4_Vision_With_Function_Calling.py)
+action_endpoint:
+  url: "http://localhost:5055/webhook"
+
+# Required for the Contextual Response Rephraser
+nlg:
+  type: rephrase

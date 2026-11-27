@@ -1,0 +1,6 @@
+py --list 
+py -3.10 -m pip install virtualenv
+py -3.10 -m virtualenv venv-py3.10-rasa
+venv-py3.10-rasa\Scripts\activate
+uv pip install rasa-pro==3.10.15
+uv pip install -r requirements.txt

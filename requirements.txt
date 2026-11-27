@@ -1,0 +1,11 @@
+PyMuPDF==1.25.3
+pypdf==5.3.1
+instructor==1.14.5
+litellm==1.82.0
+openai==2.26.0
+pillow==11.1.0
+beautifulsoup4==4.13.3
+transformers==4.52.4
+prompt-toolkit==3.0.28
+notebook
+uv

@@ -1,0 +1,33 @@
+recipe: default.v1
+language: en
+
+pipeline:
+- name: SingleStepLLMCommandGenerator
+  llm:
+    model: "gpt-3.5-turbo-0125"
+    
+    # Explicitly define provider for Rasa Pro 3.10 LiteLLM integration
+    provider: "openai" 
+    timeout: 15
+    temperature: 0.0
+    top_p: 0.0
+
+
+
+# Added Flow Retrieval embeddings to support FlowPolicy accuracy
+flow_retrieval:
+  embeddings:
+    provider: openai
+    model: text-embedding-3-small
+
+policies:
+- name: FlowPolicy
+#- name: EnterpriseSearchPolicy
+- name: IntentlessPolicy
+
+assistant_id: 20240418-073244-narrow-archive
+
+session_config:
+  # Increased from 2 to 15 minutes to prevent premature session loss
+  session_expiration_time: 15  
+  carry_over_slots_to_new_session: false
